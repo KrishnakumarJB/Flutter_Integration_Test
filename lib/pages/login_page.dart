@@ -14,8 +14,8 @@ class _LoginPageState extends State<LoginPage> {
 
   void _login() {
     // Validate login credentials and navigate to home screen if valid
-    if (_usernameController.text == 'username' &&
-        _passwordController.text == 'password') {
+    if (_usernameController.text == 'highlevel' &&
+        _passwordController.text == 'pass123') {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -61,12 +61,14 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextFormField(
+              key: const ValueKey('username_key'),
               controller: _usernameController,
               decoration: const InputDecoration(
                 labelText: 'Username',
               ),
             ),
             TextFormField(
+              key: const ValueKey('password_key'),
               controller: _passwordController,
               obscureText: true,
               decoration: const InputDecoration(
@@ -75,6 +77,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 16.0),
             ElevatedButton(
+              key: const ValueKey('login_key'),
               onPressed: _login,
               child: const Text('Login'),
             ),
