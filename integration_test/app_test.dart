@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:high_level/pages/home_page.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:high_level/main.dart' as app;
 
@@ -20,7 +19,7 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(loginBtn);
       await tester.pumpAndSettle();
-      expect(find.byType(HomePage), findsOneWidget);
+      expect(find.text('Welcome to the home screen!'), findsOneWidget);
     });
   });
 }
