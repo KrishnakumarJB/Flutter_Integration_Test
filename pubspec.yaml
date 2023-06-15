@@ -41,8 +41,6 @@ dev_dependencies:
     sdk: flutter
   integration_test:
     sdk: flutter
-  flutter_gherkin: ^3.0.0-rc.17
-  gherkin: ^3.1.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
